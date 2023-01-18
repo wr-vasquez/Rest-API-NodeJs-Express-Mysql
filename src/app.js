@@ -1,18 +1,22 @@
-import express from "express";
-import morgan from "morgan";
-// Routes
-import languageRoutes from "./routes/language.routes";
+import express from 'express'
+import morgan from 'morgan';
+const cors = require("cors");
+
+//Routes
+import languajeRoutes from './routes/languaje.routes'
 
 const app = express();
 
-// Settings
-app.set("port", 4000);
-
-// Middlewares
-app.use(morgan("dev"));
+//Midlewares
+app.use(morgan('dev'));
 app.use(express.json());
+app.use(cors());
 
-// Routes
-app.use("/api/languages", languageRoutes);
+// app.get("/", (req,res) => {
+//     res.json("Bienvenidos")
+// })
+
+//Rutas
+app.use(languajeRoutes);
 
 export default app;
