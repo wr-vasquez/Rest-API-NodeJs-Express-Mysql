@@ -9,7 +9,7 @@ const getLenguaje =  async (req, res) => {
      } catch (error) {
         res.status(500);
         res.send(error.message)
-        
+         
      }
 };
 
@@ -24,7 +24,7 @@ const addLenguaje =  async (req, res) => {
        
     } catch (error) {
        res.status(500);
-       res.send(error.message)
+       res.send(error.message) 
        
     }
 };
